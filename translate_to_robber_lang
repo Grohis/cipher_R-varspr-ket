@@ -1,0 +1,13 @@
+def translate_to_robber_lang(line: str):
+    vowels =['a', 'e', 'i', 'o', 'u']
+    result = []
+
+    for letter in line:
+        if letter.lower() in vowels or not letter.isalpha():
+            result.append(letter)
+        else:
+            result.append(letter + 'o' + letter)
+
+    return ''.join(result)
+
+print(translate_to_robber_lang("I Think YoU Might BE righT!"))
